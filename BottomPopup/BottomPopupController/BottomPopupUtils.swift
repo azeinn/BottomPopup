@@ -30,6 +30,7 @@ public extension BottomPopupDelegate {
 
 public protocol BottomPopupAttributesDelegate: class {
     var popupHeight: CGFloat { get }
+    var popupWidth: CGFloat { get }
     var popupTopCornerRadius: CGFloat { get }
     var popupPresentDuration: Double { get }
     var popupDismissDuration: Double { get }
@@ -41,6 +42,7 @@ public protocol BottomPopupAttributesDelegate: class {
 
 public struct BottomPopupConstants {
     static let kDefaultHeight: CGFloat = 377.0
+    static let kDefaultWidth: CGFloat = UIScreen.main.bounds.width
     static let kDefaultTopCornerRadius: CGFloat = 10.0
     static let kDefaultPresentDuration = 0.5
     static let kDefaultDismissDuration = 0.5

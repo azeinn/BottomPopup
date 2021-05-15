@@ -79,6 +79,8 @@ open class BottomPopupViewController: UIViewController, BottomPopupAttributesDel
     
     open var popupHeight: CGFloat { return BottomPopupConstants.kDefaultHeight }
     
+    open var popupWidth: CGFloat { return BottomPopupConstants.kDefaultWidth }
+
     open var popupTopCornerRadius: CGFloat { return BottomPopupConstants.kDefaultTopCornerRadius }
     
     open var popupPresentDuration: Double { return BottomPopupConstants.kDefaultPresentDuration }
