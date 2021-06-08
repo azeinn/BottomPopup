@@ -29,6 +29,7 @@ public extension BottomPopupDelegate {
 }
 
 public protocol BottomPopupAttributesDelegate: class {
+    var isFromSide: Bool { get }
     var popupHeight: CGFloat { get }
     var popupWidth: CGFloat { get }
     var popupTopCornerRadius: CGFloat { get }
@@ -41,6 +42,7 @@ public protocol BottomPopupAttributesDelegate: class {
 }
 
 public struct BottomPopupConstants {
+    static let kDefaultFromSide: Bool = false
     static let kDefaultHeight: CGFloat = 377.0
     static let kDefaultWidth: CGFloat = UIScreen.main.bounds.width
     static let kDefaultTopCornerRadius: CGFloat = 10.0

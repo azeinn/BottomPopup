@@ -23,7 +23,12 @@ final class BottomPopupPresentAnimator: NSObject, UIViewControllerAnimatedTransi
         let toVC = transitionContext.viewController(forKey: .to)!
         transitionContext.containerView.addSubview(toVC.view)
         let presentFrame = transitionContext.finalFrame(for: toVC)
-        let initialFrame = CGRect(origin: CGPoint(x: 0, y: UIScreen.main.bounds.size.height), size: presentFrame.size)
+        var initialFrame: CGRect
+        if attributesOwner.isFromSide {
+            initialFrame = CGRect(origin: CGPoint(x: UIScreen.main.bounds.size.width, y: 0), size: presentFrame.size)
+        } else {
+            initialFrame = CGRect(origin: CGPoint(x: 0, y: UIScreen.main.bounds.size.height), size: presentFrame.size)
+        }
         toVC.view.frame = initialFrame
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             toVC.view.frame = presentFrame

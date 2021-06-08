@@ -78,8 +78,10 @@ open class BottomPopupNavigationController: UINavigationController, BottomPopupA
     
     //MARK: BottomPopupAttributesDelegate Variables
     
-    open var popupHeight: CGFloat { return BottomPopupConstants.kDefaultHeight }
+    open var isFromSide: Bool { return BottomPopupConstants.kDefaultFromSide }
 
+    open var popupHeight: CGFloat { return BottomPopupConstants.kDefaultHeight }
+    
     open var popupWidth: CGFloat { return BottomPopupConstants.kDefaultWidth }
 
     open var popupTopCornerRadius: CGFloat { return BottomPopupConstants.kDefaultTopCornerRadius }
