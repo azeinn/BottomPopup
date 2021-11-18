@@ -45,7 +45,7 @@ public struct BottomPopupConstants {
     static let kDefaultFromSide: Bool = false
     static let kDefaultHeight: CGFloat = 377.0
     static let kDefaultWidth: CGFloat = UIScreen.main.bounds.width
-    static let kDefaultTopCornerRadius: CGFloat = 10.0
+    static let kDefaultTopCornerRadius: CGFloat = 20.0
     static let kDefaultPresentDuration = 0.5
     static let kDefaultDismissDuration = 0.5
     static let dismissInteractively = true
